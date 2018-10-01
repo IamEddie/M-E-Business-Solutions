@@ -9,18 +9,32 @@
             href="bulma.min.css"/>
     </head>
     <body>
+            <script> 
+                window.onload = function(){
+                        var submitButton = document.getElementById("submit")
+                        submitButton.addEventListener('click', function(event){
+                                alert('You clicked submit again');
+                        })
+                }
+            </script>
         <div container>
             <form>
                 <h2>This is an example of a form</h2>
 
                 <div class="field">
                         <label class="label">name</label>
-                        <input class="input" type="text" />
+                        <input 
+                        id="name"
+                        class="input" 
+                        type="text" />
                 </div>
 
                 <div class="field">
                         <label class="label">surname</label>
-                        <input class="input" type="text" />
+                        <input 
+                        id="surname"
+                        class="input" 
+                        type="text" />
                 </div>
                 
                 <div class="field">
@@ -44,10 +58,11 @@
                 </div>
                 
                 <div class="field">
-                        <input type="submit" 
+                        <input 
+                            id="submit"
+                            type="submit" 
                             value="press" 
-                            class="button is-primary"
-                            onclick="alert('Clicked on submit button')" />
+                            class="button is-primary" />
                 </div>
             </form>
         </div>

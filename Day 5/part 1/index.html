@@ -9,18 +9,29 @@
             href="bulma.min.css"/>
     </head>
     <body>
+            <script> 
+                function hoverOverSurname(){
+                        alert("Hovering over surname");
+                }
+            </script>
         <div container>
             <form>
                 <h2>This is an example of a form</h2>
 
                 <div class="field">
                         <label class="label">name</label>
-                        <input class="input" type="text" />
+                        <input 
+                        class="input" 
+                        type="text" 
+                        onmouseover="alert('You hovered over name')" />
                 </div>
 
                 <div class="field">
                         <label class="label">surname</label>
-                        <input class="input" type="text" />
+                        <input 
+                        class="input" 
+                        type="text"
+                        onmouseover="hoverOverSurname()" />
                 </div>
                 
                 <div class="field">
