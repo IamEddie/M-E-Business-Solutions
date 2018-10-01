@@ -7,6 +7,7 @@ window.onload = function(){
             var surname = getSurname();
             var age = getAge();
             var phone = getPhone();
+            var gender = getGender();
 
             if(age < 18){
                 alert("You are not old enough to use this form");
@@ -16,6 +17,8 @@ window.onload = function(){
                 alert('Please type in your surname');
             }else if(phone.length < 10){
                 alert('Please type in your phone number');
+            }else if(gender == "" || gender == undefined){
+                alert('Please type in your gender');
             }else{
                 alert("Hello " + name + " "+ surname + " " + "is" + " " + 
                 age + " " + "years old" + " " + "owning phone number"+ " " + phone);
@@ -57,4 +60,12 @@ function getAge(){
 function getPhone(){
     var phone = document.getElementById('phone')
     return phone.value
+}
+/*
+*This function gets gender
+*from the gender input
+*/
+function getGender(){
+    var gender = document.getElementById('gender')
+    return gender.value
 }
