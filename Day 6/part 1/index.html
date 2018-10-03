@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Second html page</title>
-        <link 
-            rel="stylesheet" 
-            type="text/css" 
-            media="screen" 
-            href="bulma.min.css" />
+        <title>Conncect To WhereIsMyTransport</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="bulma.min.css"/>
     </head>
     <body>
-        <div class="container">
-            <form class="form">
-                <h2>This is an example of a form</h2>
+
+        <div class="container columns is-fluid" id="login-container">
+            <form class="form is-half" id="login-form">
+                <div class="field">
+                    <label class="label">Cliet Key</label>
+                        <input
+                            id="client-id"
+                            class="input"
+                            type="text">
+
+                    <label class="label">Client secret</label>
+                        <input
+                            id="client-secret"
+                            class="input"
+                            type="text">
+                    
+                </div>
                     <div class="field">
-                    <label class="label">cliend ID</label>
-                    <input class="input" type="text" />
+                        <input type="submit" id="submit" class="button is-primary"/>
                     </div>
-        
-                    <div class="field">
-                    <label class="label">client secrets</label>
-                    <input class="input" type="text" />
-                    </div>
-                        
-                    <div class="button">
-                    <label id="submit" class="label">Submit</label>
-                    </div>  
             </form>
+
+            <form class="form is-half" id="agencies">
+                <div class="field">
+                    <label></label>
+                    <select id="agencies-select">
+                        <option></option>
+                    </select>
+                </div>
+            </form>
+
+            <div id="result" class="container is-primary">
+                Result goes here
+            </div>
+        </div>
+
+        <!-- logout form -->
+        <div class="container" id="logout-form">
+            <form class="form is-half">
+                <div class="field">
+                    <input
+                        type="submit"
+                        id="submit-logout"
+                        value="logout"
+                        class="button is-danger">
+                </div>
+            </form>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
